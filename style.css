@@ -1,0 +1,47 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    color: #777;
+}
+
+#content {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+#content {
+    height: 100%;
+}
+.caption {
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    text-align: center;
+    color: #000;
+}
+h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color: #000000;
+}
+
+.box{
+    background-color: white;
+    padding: 100px;
+    border-radius: 10px;
+    opacity: 0.6;
+    box-shadow: 0px 0px 28px 7px rgba(0,0,0,0.65);
+}
+
+p {
+    color: #c1b2b2;
+}
+
+@media all {
+
+}

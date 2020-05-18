@@ -1,10 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="body">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>InspireMe</title>
 </head>
 <body>
-$END$
+<div id="content">
+
+        <div class="caption">
+            <div class="box">
+            <h3 id="text"><b>Gelieve javascript in te schakelen.</b></h3>
+            <p id="author"></p>
+            </div>
+        </div>
+</div>
+
 </body>
+
+<script>
+    httpGetAsync()
+
+    function httpGetAsync()
+    {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() {
+
+            if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
+            {
+                const response = JSON.parse(xmlHttp.responseText);
+                console.log(response.contents.quotes[0])
+                document.getElementById("content").style.backgroundImage = "url(" + response.contents.quotes[0].background + ")";
+                document.getElementById("text").innerHTML = "<b>" + response.contents.quotes[0].quote + "</b>";
+                document.getElementById("author").innerHTML = "<b>" + response.contents.quotes[0].author + "</b>";
+            }
+        }
+        xmlHttp.open("GET", "https://quotes.rest/qod", true); // true for asynchronous
+        xmlHttp.send();
+    }
+
+</script>
 </html>

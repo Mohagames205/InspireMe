@@ -1,5 +1,5 @@
 # InspireMe
 InspireMe toont elke dag een nieuwe quote met een bijpassende achtergrond. 
 
-# API
+## API
 https://quotes.rest/
